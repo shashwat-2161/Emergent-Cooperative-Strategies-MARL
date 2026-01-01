@@ -14,12 +14,12 @@ def train():
         render_mode=None
     )
 
-    # 2. WRAPPERS (THE FIX IS HERE)
+    # 2. WRAPPERS
     # ----------------------------------------------------------------
     # FIX: Pad observations so Wolf and Sheep have same input shape
     env = ss.pad_observations_v0(env)
     
-    # FIX: Pad actions (Just in case, good practice in MARL)
+    # FIX: Pad actions
     env = ss.pad_action_space_v0(env)
     # ----------------------------------------------------------------
 
